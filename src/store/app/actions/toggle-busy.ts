@@ -1,11 +1,11 @@
 import { ActionContext } from '../../action-context';
 import { AppState } from '../state';
-import mutationTypes from '../mutations/types';
+import types from '../types';
 
 let counter = 0;
 
 export default (ctx: ActionContext<AppState>, isBusy: boolean) => {
-  return new Promise(resolve => {
+  return new Promise<any>(resolve => {
     if (isBusy) {
       counter++;
     } else if (counter > 0) {
@@ -14,7 +14,7 @@ export default (ctx: ActionContext<AppState>, isBusy: boolean) => {
 
     const isActuallyBusy = counter > 0;
     if (isActuallyBusy !== ctx.state.isBusy) {
-      ctx.commit(mutationTypes.setAppBusy, isActuallyBusy);
+      ctx.commit(types.mutations.setAppBusy, isActuallyBusy);
     }
     resolve();
   });

@@ -1,9 +1,13 @@
-import actions from './actions/types';
-import mutations from './mutations/types';
-import getters from './getters/types';
+import prefix from './module-name';
 
 export default {
-  actions,
-  mutations,
-  getters,
+  actions: {
+    toggleBusy: `${prefix}_toggle_busy`,
+  },
+  mutations: {
+    setAppBusy: `${prefix}_set_app_busy`,
+  },
+  getters: {
+    isAppBusy: `${prefix}_is_app_busy`,
+  },
 };

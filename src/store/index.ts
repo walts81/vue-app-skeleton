@@ -1,10 +1,15 @@
-import Vue from 'vue';
 import { Store } from 'vuex';
-import modules from './vuex-modules';
-import myVuex from '../plugins/vuex';
+import { RootState } from './root/state';
+import types from './root/types';
 
-Vue.use(myVuex);
+let storeInstance: Store<RootState> | null = null;
 
-export default new Store({
-  modules,
-});
+const setStore = (store: Store<RootState>) => {
+  storeInstance = store;
+};
+
+const getStore = () => {
+  return storeInstance;
+};
+
+export { setStore, getStore, RootState, types };

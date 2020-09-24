@@ -7,6 +7,6 @@ declare module '*.vue' {
 
 declare module 'vue/types/vue' {
   interface Vue {
-    $myStore: Store<import('./store/root-state').RootState>;
+    $theStore: Store<import('./store/root-state').RootState>;
   }
 }

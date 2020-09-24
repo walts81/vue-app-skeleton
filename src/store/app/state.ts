@@ -2,6 +2,6 @@ export interface AppState {
   isBusy: boolean;
 }
 
-export const getDefaultState = (): AppState => ({
+export default (): AppState => ({
   isBusy: false,
 });
