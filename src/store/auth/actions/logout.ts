@@ -1,7 +1,6 @@
 import { ActionContext } from '../../action-context';
 import { getDefaultUser } from '../models';
-import { AuthState } from '../state';
-import types from '../types';
+import { AuthState, types } from '../module-data';
 
 export default (ctx: ActionContext<AuthState>) => {
   return new Promise<any>(resolve => {

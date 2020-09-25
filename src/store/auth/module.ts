@@ -1,9 +1,7 @@
 import { factories } from '../module-factory';
 import login from './actions/login';
 import logout from './actions/logout';
-import moduleName from './module-name';
-import getDefaultState from './state';
-import types from './types';
+import { moduleName, getDefaultState, types } from './module-data';
 
 export default () => {
   const module = factories.moduleFactory(moduleName, getDefaultState());

@@ -17,7 +17,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import spinner from './components/spinner.vue';
-import { types } from './store';
+import { vuexTypes } from './store';
 
 // let counter = 0;
 
@@ -28,7 +28,7 @@ import { types } from './store';
 })
 export default class App extends Vue {
   get isBusy() {
-    return this.$theStore.getters[types.getters.app.isAppBusy];
+    return this.$theStore.getters[vuexTypes.getters.app.isAppBusy];
   }
 
   // mounted() {
@@ -36,7 +36,7 @@ export default class App extends Vue {
   //     if (counter > 20) {
   //       clearInterval(h);
   //     } else {
-  //       this.$theStore.dispatch(types.actions.app.toggleBusy, !this.isBusy);
+  //       this.$theStore.dispatch(vuexTypes.actions.app.toggleBusy, !this.isBusy);
   //       counter++;
   //     }
   //   }, 5000);

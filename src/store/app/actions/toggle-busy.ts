@@ -1,6 +1,5 @@
 import { ActionContext } from '../../action-context';
-import { AppState } from '../state';
-import types from '../types';
+import { AppState, types } from '../module-data';
 
 let counter = 0;
 

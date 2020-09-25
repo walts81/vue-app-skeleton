@@ -1,7 +1,5 @@
 import { factories } from '../module-factory';
-import moduleName from './module-name';
-import getDefaultState from './state';
-import types from './types';
+import { moduleName, getDefaultState, types } from './module-data';
 import toggleBusy from './actions/toggle-busy';
 
 export default () => {

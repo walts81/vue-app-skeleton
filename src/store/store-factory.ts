@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import { Store } from 'vuex';
-import createModules from './root/vuex-modules';
-import { RootState } from './root/state';
+import createModules from './root/create-modules';
+import { RootState } from './root/module-data';
 import vuex from './vuex-plugin';
 import { setStore } from './index';
 

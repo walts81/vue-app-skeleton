@@ -1,6 +1,5 @@
 import { Store } from 'vuex';
-import { RootState } from './root/state';
-import types from './root/types';
+import { RootState, vuexTypes } from './root/module-data';
 
 let storeInstance: Store<RootState> | null = null;
 
@@ -12,4 +11,4 @@ const getStore = () => {
   return storeInstance;
 };
 
-export { setStore, getStore, RootState, types };
+export { setStore, getStore, RootState, vuexTypes };
